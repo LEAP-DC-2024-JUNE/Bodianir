@@ -1,0 +1,58 @@
+.margin{
+
+  display: grid;
+  grid-template-columns: repeat(4,200px);
+  grid-template-rows: repeat(4 , 200px);
+  gap:20px;
+
+
+}
+.first{
+  grid-row:1/4;
+  grid-column:1 ;
+  border-style:solid ;
+  background-color: green;
+  
+}
+.s{
+ background-color: green;
+ 
+  grid-column:2/4;
+  border-style:solid ;
+
+}
+.t{
+background-color: red;
+  border-style:solid ;
+
+}
+.b{
+background-color: yellow;
+border-style:solid ;
+
+}
+.c{
+background-color: red;
+  border-style:solid ;
+
+}
+.x{
+background-color:green;
+grid-row: 2/4;
+grid-column: 4;
+border-style:solid ;
+ 
+}
+.v{
+  
+  border-style:solid ;
+  background-color: red;
+}
+.n{
+
+  border-style:solid ;
+ background-color: yellow;
+}
+
+  
+  
