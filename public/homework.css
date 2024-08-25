@@ -52,3 +52,31 @@ background-color: green;
   background-color: rgb(92, 12, 221);
   grid-column: 5/9;
 }
+
+@media screen and (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr; 
+  }
+}
+
+.semantic{
+  display: grid;
+  background-color:black;
+  grid-template-columns: repeat(4,200px);
+  grid-template-rows: repeat(4 , 200px);
+}
+.container4{
+color:green;
+text-align: center;
+font-size: 2em;
+border: solid 1px green;
+width: 100vh; 
+top: 0; 
+left:0;
+
+
+
+}
+.ptag{
+  text-align: center;
+}

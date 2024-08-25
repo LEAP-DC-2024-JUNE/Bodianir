@@ -82,4 +82,5 @@ console.log(arrays.includes(100))
  pop.pop()
  console.log(pop)
  //1.2.3
+
  
