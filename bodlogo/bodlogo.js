@@ -52,7 +52,7 @@ console.log(complex)
 
 
 
-let max=[1,3,5,22,89,46,17,31]
+let max=[1,3,5,22,89,46,17,31,100]
 let minNumber=max[0]
 let maxNumber=max[0]
 let cons=0
@@ -60,8 +60,26 @@ for(let i =1; i<max.length; i++){
 if(max[i]>maxNumber){
   maxNumber=max[i]
 }
+
 }if(max[i]<minNumber){
   minNumber=max[i]
 }
 console.log("Max number:", maxNumber); 
 console.log("Min number:", minNumber); 
+
+let arrays = [1, 2, 3, 4, 5];
+for (let i = 0; i < arrays.length; i++) {
+  console.log(arrays[i])
+}
+
+
+let num=5
+let ss=0
+
+for (let pow = 0; pow < Infinity; pow++) {
+  ss = num ** pow;
+  if (ss > 1000) {
+    console.log(`${num}-iin ${pow} zeregn 1000aas ih bn: ${ss}`);
+    break;
+  }
+}
