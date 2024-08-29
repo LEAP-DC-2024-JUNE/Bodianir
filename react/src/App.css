@@ -105,6 +105,21 @@
   grid-column: 1/9;
   grid-row: 6/9;
 }
-.Andy {
+.About {
+  background-color: rgb(71, 71, 148);
+  text-decoration: none;
+  color: black;
+}
+button {
+  background-color: rgb(133, 133, 192);
+  font-size: 2em;
+}
+h1 {
   color: blue;
+}
+.black {
+  background-color: yellow;
+}
+.yellow {
+  background-color: yellow;
 }

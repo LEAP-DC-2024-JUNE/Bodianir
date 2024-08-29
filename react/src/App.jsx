@@ -6,6 +6,9 @@ import Article from "./Article";
 import Section from "./Section";
 import Aside from "./Aside";
 import Footer from "./Footer";
+import React from "react";
+import { Link } from "react-router-dom";
+import Navbar from "./pages/Product";
 
 function App() {
   function printName(param) {
@@ -13,9 +16,9 @@ function App() {
   }
   return (
     <div>
-      <div class="grid">
+      <div className="grid">
         <Header />
-        <Nav />
+        <Navbar />
         <Article />
         <Section />
         <Aside />
@@ -27,3 +30,15 @@ function App() {
 }
 
 export default App;
+/*  <div className="About">
+<button className="A">
+  <Link to="/about">Go to About Page</Link>
+</button>
+
+<button>
+  <Link to="/home">Go to Home Page</Link>
+</button>
+<button>
+  <Link to="/product">Go to Product Page</Link>
+</button>
+</div>*/
