@@ -178,9 +178,9 @@ console.log(
     },
   ])
 );
+
 5;
 function readyToPutInTheDOM(arr) {
-  // Use map to transform each object into an HTML string
   return arr.map((item) => `<h1>${item.name}</h1><h2>${item.age}</h2>`);
 }
 
