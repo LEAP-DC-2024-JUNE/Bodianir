@@ -1,8 +1,35 @@
 import Image from "next/image";
+
+import { WorkCard } from "./Workcard";
 import Picture from "../images/Picture.png";
+import Medee from "../images/Medee.png";
+import Toim from "../images/Toim.png";
 export const Work = () => {
   return (
-    <div>
+    <div className="flex flex-col items-center">
+      <WorkCard
+        imgSrc={Picture}
+        Title="UBCab"
+        Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae."
+      />
+
+      <WorkCard
+        imgSrc={Toim}
+        Title="Mentorhub"
+        Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae."
+        reverse={true}
+      />
+      <WorkCard
+        imgSrc={Medee}
+        Title="iToim"
+        Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae."
+      />
+    </div>
+  );
+};
+
+{
+  /* <div>
       <div className="text-center">
         <button className="px-4 bg-gray-200 text-black rounded-lg h-10 mt-24">
           Work
@@ -58,6 +85,5 @@ export const Work = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    </div> */
+}

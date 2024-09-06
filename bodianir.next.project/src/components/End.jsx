@@ -5,7 +5,7 @@ export const End = () => {
   return (
     <div>
       <div className="text-center">
-        <button className="px-4 mt-20 bg-gray-200 text-black rounded-lg h-10 mt-24">
+        <button className="px-4 mt-20 bg-gray-200 text-black rounded-lg h-10">
           Get In Touch
         </button>
       </div>

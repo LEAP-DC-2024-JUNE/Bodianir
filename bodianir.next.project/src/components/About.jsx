@@ -37,7 +37,7 @@ export function About() {
             <li>Full-time Freelancer</li>
             <li>Avid Learner</li>
           </ul>
-          <p className="ml-52">
+          <p className="ml-52 mb-20">
             One last thing, I'm available for freelance work, so feel free to
             reach out and say hello! I promise I don't bite 😉
           </p>

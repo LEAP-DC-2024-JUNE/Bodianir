@@ -26,13 +26,15 @@ function Nav() {
               <Logo />
             </p>
           </div>
-
-          <Image
-            src={Profile}
-            alt="Profile picture of Andy"
-            width={300}
-            className="mr-20 shadow-2xl"
-          />
+          <div className=" mr-44">
+            <Image
+              src={Profile}
+              alt="Profile picture of Andy"
+              width={700}
+              height={600}
+              className="mr-20 shadow-2xl"
+            />
+          </div>
         </div>
       </div>
     </div>

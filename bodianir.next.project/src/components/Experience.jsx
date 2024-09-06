@@ -1,86 +1,47 @@
-import { Upwork } from "../icons/Upwork";
+import { Up } from "../components/Up";
+import Logo from "../images/Logo.png";
 
-export const Map = () => {
-  const arr = [
-    {
-      title: "St.Frontend Developer",
-      description:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.Ut pretium arcu et massa semper, id fringilla leo semper.Sed quis justo ac magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      date: "Nov 2021 - Present",
-    },
-    {
-      title: "Team Lead",
-      description:
-        " Sed quis justo ac magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis justo ac magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit..",
-      date: "Jul 2017 - Oct 2021",
-    },
-    {
-      title: "Full Stack Developer",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      date: "Dec 2015 - May 2017",
-    },
-    {
-      title: "St.Frontend Developer",
-      description:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.Ut pretium arcu et massa semper, id fringilla leo semper.Sed quis justo ac magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      date: "Nov 2021 - Present",
-    },
-    {
-      title: "Team Lead",
-      description:
-        " Sed quis justo ac magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis justo ac magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit..",
-      date: "Jul 2017 - Oct 2021",
-    },
-    {
-      title: "Full Stack Developer",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      date: "Dec 2015 - May 2017",
-    },
-    {
-      title: "St.Frontend Developer",
-      description:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.Ut pretium arcu et massa semper, id fringilla leo semper.Sed quis justo ac magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      date: "Nov 2021 - Present",
-    },
-    {
-      title: "Team Lead",
-      description:
-        " Sed quis justo ac magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis justo ac magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit..",
-      date: "Jul 2017 - Oct 2021",
-    },
-    {
-      title: "Full Stack Developer",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      date: "Dec 2015 - May 2017",
-    },
-  ];
-
+export const Experience = () => {
   return (
-    <div className="bg-gray-100">
-      <div className="text-center">
-        <div className="flex justify-center">
-          <button className="text-center px-4 bg-gray-200 text-black rounded-lg h-10 mt-24">
-            Experience
-          </button>
-        </div>
-        {arr.map((element, index) => (
-          <div className="mt-20 bg-white ml-72 mr-72">
-            <div className=" top-0 mt-20 ml-96 text-gray-600">
-              {element.date}
-            </div>
-            <div className="">
-              <Upwork />
-            </div>
-            <div>
-              <h1>{element.title}</h1>
+    <div className="bg-gray-50 mb-20">
+      <div className=" mt-20 justify-center flex ">
+        <button className="px-4 bg-gray-300 text-black rounded-lg h-8 mt-20 ">
+          Experience
+        </button>
+      </div>
+      <div className="items-center text-center mt-10 mb-10">
+        <p>Here is a quick summary of my most recent experiences</p>
+      </div>
 
-              <h1 className="mt-10">{element.description}</h1>
-            </div>
-          </div>
-        ))}
+      <div>
+        <Up
+          imgSrc={Logo}
+          Title="Sr.Frontend Developer"
+          Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          Description2="Ut pretium arcu et massa semper, id fringilla leo semper."
+          Description3="Sed quis justo ac magna."
+          Description4="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          Date="Nov 2021 - Present"
+        />
+      </div>
+      <div>
+        <Up
+          imgSrc={Logo}
+          Title="Team Lead"
+          Description="Sed quis justo ac magna."
+          Description2="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          Description3="Sed quis justo ac magna."
+          Description4="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          Date="2017 July-Nov 2021 - Present"
+        />
+      </div>
+      <div>
+        <Up
+          imgSrc={Logo}
+          Title="Full Stack Developer"
+          Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae."
+          Date="Dec 2015-May 2017 - Present"
+        />
       </div>
     </div>
   );
