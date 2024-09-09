@@ -90,121 +90,40 @@ function doubleNumbers(array) {
   return result;
   console.log(doubleNumbers([2, 5, 100]));
 }*/
-
-1;
-function stringItUp(arr) {
-  const result = arr.map((string) => string.toString());
+function doubleNumbers(arr) {
+  const result = arr.map((element) => {
+    return element * 2;
+  });
   return result;
 }
 
-console.log(stringItUp([2, 5, 100]));
+const doubledNumbers = doubleNumbers([2, 5, 100]);
+console.log(doubledNumbers);
 
 2;
-function capitalizeNames(arr) {
-  const capital = arr.map((cap) => cap.charAt(0).toUpperCase() + cap.slice());
-  return capital;
-}
-console.log(capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"]));
 
-3;
-function namesOnly(arr) {
-  const cc = arr.map((string) => string.name);
-  return cc;
-}
-
-console.log(
-  namesOnly([
-    {
-      name: "Angelina Jolie",
-      age: 80,
-    },
-    {
-      name: "Eric Jones",
-      age: 2,
-    },
-    {
-      name: "Paris Hilton",
-      age: 5,
-    },
-    {
-      name: "Kayne West",
-      age: 16,
-    },
-    {
-      name: "Bob Ziroll",
-      age: 100,
-    },
-  ])
-);
-
-4;
-
-let c = 16;
-
-function makeStrings(arr) {
-  const results = arr.map((limit) => {
-    if (limit.age > c) {
-      return `${limit.name} can go to Matrix`;
-    } else {
-      return `${limit.name} is under age!!`;
-    }
+function stringItUp(arr) {
+  const result = arr.map((element) => {
+    return element.toString();
   });
-  results.forEach((result) => console.log(result));
+  return result;
+}
+console.log(stringItUp([2, 5, 100]));
 
-  return results;
+// 3;
+// function capitalizeNames(arr) {
+//   const result = arr.map((names) => {
+//     return names.charAt(0).toUpperCase() + names.slice(1).toLowerCase();
+//   });
+//   return result;
+// }
+
+// console.log(capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"]));
+function Name(array) {
+  const result = array.map((capital) => {
+    return capital.charAt(0).toUpperCase() + capital.slice(1).toLowerCase();
+  });
+  return result;
 }
 
-console.log(
-  makeStrings([
-    {
-      name: "Angelina Jolie",
-      age: 80,
-    },
-    {
-      name: "Eric Jones",
-      age: 2,
-    },
-    {
-      name: "Paris Hilton",
-      age: 5,
-    },
-    {
-      name: "Kayne West",
-      age: 16,
-    },
-    {
-      name: "Bob Ziroll",
-      age: 100,
-    },
-  ])
-);
-
-5;
-function readyToPutInTheDOM(arr) {
-  return arr.map((item) => `<h1>${item.name}</h1><h2>${item.age}</h2>`);
-}
-
-console.log(
-  readyToPutInTheDOM([
-    {
-      name: "Angelina Jolie",
-      age: 80,
-    },
-    {
-      name: "Eric Jones",
-      age: 2,
-    },
-    {
-      name: "Paris Hilton",
-      age: 5,
-    },
-    {
-      name: "Kayne West",
-      age: 16,
-    },
-    {
-      name: "Bob Ziroll",
-      age: 100,
-    },
-  ])
-);
+console.log(Name(["andy", "Bro,", "leETCOde"]));
