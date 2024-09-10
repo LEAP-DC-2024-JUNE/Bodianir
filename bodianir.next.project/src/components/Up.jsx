@@ -1,15 +1,12 @@
 import Image from "next/image";
 
 export const Up = (props) => {
-  const {
-    Title,
-    Description,
-    imgSrc,
-    Description2,
-    Description3,
-    Description4,
-    Date,
-  } = props;
+  const logos = [
+    {
+      imgSrc: Picture,
+      title: "Javascript",
+    },
+  ];
   return (
     <div className="bg-white border-solid border-2 w-[1000px] items-center mx-60 h-[200px] mb-20 ">
       <div className=" flex items-center gap-20 ml-5  ">
