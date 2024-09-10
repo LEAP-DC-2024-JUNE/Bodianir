@@ -1,18 +1,20 @@
 import Image from "next/image";
-import { Java } from "../icons/Java";
-import { Type } from "../icons/Type";
-import { React } from "../icons/React";
-import { Next } from "../icons/Next";
-import Node from "../icons/Node";
-import { Express } from "../icons/Express";
-import { Nest } from "../icons/Nest";
+import Java from "../images/Java.jpg";
+import Type from "../images/Type.jpg";
+import React from "../images/React.jpg";
+import Next from "../images/Next.jpg";
+import Node from "../images/Node.jpg";
+import Express from "../images/Express.jpg";
+import Nest from "../images/Nest.jpg";
+import Socket from "../images/Socket.jpg";
 import Post from "../images/post.png";
-import { Mongo } from "../icons/Mongo";
-import { Sass } from "../icons/Sass";
-import { Tailwind } from "../icons/Tailwind";
-import { Figma } from "../icons/Figma";
-import { Cypress } from "../icons/Cypress";
-import { Story } from "../icons/Story";
+import Mongo from "../images/Mongo.png";
+import Sass from "../images/Sass.png";
+import Tailwind from "../images/Vector.png";
+import Figma from "../images/Figma.jpg";
+import Cypress from "../images/Cypress.jpg";
+import Story from "../images/Story.jpg";
+import Git from "../images/Git.jpg";
 
 export const Skill = () => {
   const logos = [
@@ -44,10 +46,18 @@ export const Skill = () => {
       imgSrc: Nest,
       title: "Nest.js",
     },
+    {
+      imgSrc: Socket,
+      title: "Socket.io",
+    },
+    {
+      imgSrc: Post,
+      title: "Post",
+    },
 
     {
       imgSrc: Mongo,
-      title: "Mongo",
+      title: "MongoDB",
     },
     {
       imgSrc: Sass,
@@ -69,12 +79,25 @@ export const Skill = () => {
       imgSrc: Story,
       title: "Storybook",
     },
+    {
+      imgSrc: Git,
+      title: "Git",
+    },
   ];
   return (
     <div>
-      {logos.map((logo) => (
-        <Image src={logo.imgSrc} />
-      ))}
+      <button className="mb-4">Skills</button>
+      <p className="mb-4">
+        The skills, tools and technologies I am really good at:
+      </p>
+      <div className="flex flex-wrap gap-20 overflow-x-auto mx-56">
+        {logos.map((logo, index) => (
+          <div key={index} className="flex-shrink-0 flex flex-col items-center">
+            <Image src={logo.imgSrc} alt={logo.title} width={40} height={40} />
+            <p className="mt-2">{logo.title}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
