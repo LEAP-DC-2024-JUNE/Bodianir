@@ -16,7 +16,8 @@ const geistMono = localFont({
 export default function Home() {
   return (
     <div className="bg-white">
-      <Class />
+      {/* <Class /> */}
+      <div className="w-[200px] h-[200px] bg-black sm:bg-red-600 sm:w-[200px] sm:h-[200px]"></div>
     </div>
   );
 }
