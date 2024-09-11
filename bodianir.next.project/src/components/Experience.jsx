@@ -31,7 +31,7 @@ export const Experience = () => {
     },
   ];
   return (
-    <div className="bg-gray-50 mb-20">
+    <div className="dark:bg-blue-950 mb-20">
       <div className="mt-20 justify-center flex">
         <button className="px-4 bg-gray-300 text-black rounded-lg h-8 mt-20">
           Experience
@@ -42,7 +42,7 @@ export const Experience = () => {
       </div>
       <div>
         {jobs.map((job) => (
-          <div className="bg-white border-solid border-2 w-[1000px] items-center mx-60 h-[200px] mb-20 ">
+          <div className="dark:bg-blue-800 border-solid border-2 w-[1000px] items-center mx-60 h-[200px] mb-20 ">
             <div className=" flex items-center gap-20 ml-5  ">
               <Image width={100} height={100} src={Logo} />
               <p className="font-black mb-10 ml-24">{job.title}</p>

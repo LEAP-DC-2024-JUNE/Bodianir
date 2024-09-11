@@ -2,7 +2,7 @@ import Image from "next/image";
 import Abs from "../images/abs.jpg";
 export function About() {
   return (
-    <div className="bg-gray-100">
+    <div className="dark:bg-blue-950">
       <div className=" flex justify-center">
         <button className="text-center px-4 bg-gray-200 text-black rounded-lg h-10 mt-24 ">
           About me

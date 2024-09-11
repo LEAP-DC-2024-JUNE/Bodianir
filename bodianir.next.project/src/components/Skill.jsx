@@ -86,7 +86,9 @@ export const Skill = () => {
   ];
   return (
     <div>
-      <button className="mb-4">Skills</button>
+      <button className="px-4 bg-gray-300 text-black rounded-lg h-8 mt-20 flex justify-center">
+        Skills
+      </button>
       <p className="mb-4">
         The skills, tools and technologies I am really good at:
       </p>

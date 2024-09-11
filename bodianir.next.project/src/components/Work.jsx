@@ -29,7 +29,7 @@ export const Work = () => {
       description: [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
       ],
-      imgSrc: Medee,
+      imgSrc: Toim,
       button: [
         "React",
         "Next.js",
@@ -42,14 +42,14 @@ export const Work = () => {
         "Storybook",
         "Git",
       ],
-      reverse: true,
+      reverse: true, // Flag to reverse layout for Mentorhub
     },
     {
       title: "Itoim",
       description: [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
       ],
-      imgSrc: Toim,
+      imgSrc: Medee,
       button: [
         "React",
         "Next.js",
@@ -67,26 +67,39 @@ export const Work = () => {
 
   return (
     <div>
-      {works.map((work, index) => (
-        <div className="mb-8 flex items-center">
-          <h1 className="text-xl font-bold mb-2">{work.title}</h1>
-          <Image
-            src={work.imgSrc}
-            width={300}
-            height={200}
-            className="mb-2"
-            alt={work.title}
-          />
-          <p className="mb-4">{work.description}</p>
-          <div className="flex flex-wrap gap-5">
-            {work.button.map((tech) => (
-              <button className="px-4 py-2 bg-gray-300 text-black rounded-lg">
-                {tech}
-              </button>
-            ))}
+      {works.map((work, index) => {
+        return (
+          <div
+            key={index}
+            className="mb-8 flex flex-col sm:flex-row items-center sm:items-center "
+          >
+            <div className="flex sm:w-1/2">
+              <Image
+                src={work.imgSrc}
+                width={500}
+                height={500}
+                className="mb-2"
+                alt={work.title}
+              />
+            </div>
+            <div className="w-full sm:w-1/2 p-4">
+              <h1 className="text-xl font-bold mb-2">{work.title}</h1>
+              <p className="mb-4">{work.description}</p>
+
+              <div className="flex flex-wrap gap-5">
+                {work.button.map((tech, idx) => (
+                  <button
+                    key={idx}
+                    className="px-4 py-2 bg-gray-300 text-black rounded-lg"
+                  >
+                    {tech}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 };
