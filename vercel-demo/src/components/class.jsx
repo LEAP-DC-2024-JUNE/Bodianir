@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Eye from "../images/Eye.jpg";
 import { Product } from "../components/product";
+import Js from "../components/js";
 
 export const Class = () => {
   const jobs = [
