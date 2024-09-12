@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Java from "../images/Java.jpg";
 import Type from "../images/Type.jpg";
 import React from "../images/React.jpg";
@@ -15,7 +14,7 @@ import Figma from "../images/Figma.jpg";
 import Cypress from "../images/Cypress.jpg";
 import Story from "../images/Story.jpg";
 import Git from "../images/Git.jpg";
-
+import { Skillcard } from "../components/Skillcard";
 export const Skill = () => {
   const logos = [
     {
@@ -86,7 +85,7 @@ export const Skill = () => {
   ];
   return (
     <div>
-      <button className="px-4 bg-gray-300 text-black rounded-lg h-8 mt-20 flex justify-center">
+      <button className="items-center ml-80 bg-gray-200 text-black rounded-lg h-10 mt-24">
         Skills
       </button>
       <p className="mb-4">
@@ -94,10 +93,7 @@ export const Skill = () => {
       </p>
       <div className="flex flex-wrap gap-20 overflow-x-auto mx-56">
         {logos.map((logo, index) => (
-          <div key={index} className="flex-shrink-0 flex flex-col items-center">
-            <Image src={logo.imgSrc} alt={logo.title} width={40} height={40} />
-            <p className="mt-2">{logo.title}</p>
-          </div>
+          <Skillcard title={logo.title} key={index} img={logo.imgSrc} />
         ))}
       </div>
     </div>

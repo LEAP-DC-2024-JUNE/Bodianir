@@ -1,7 +1,6 @@
-import Logo from "../images/Logo.png";
-import Image from "next/image";
+import { Experiencecard } from "../components/Experiencecard";
 export const Experience = () => {
-  const jobs = [
+  const experience = [
     {
       title: "Sr.Frontend Developer",
       description: [
@@ -31,34 +30,29 @@ export const Experience = () => {
     },
   ];
   return (
-    <div className="dark:bg-blue-950 mb-20">
-      <div className="mt-20 justify-center flex">
-        <button className="px-4 bg-gray-300 text-black rounded-lg h-8 mt-20">
-          Experience
-        </button>
-      </div>
-      <div className="items-center text-center mt-10 mb-10">
-        <p>Here is a quick summary of my most recent experiences</p>
-      </div>
+    <div>
       <div>
-        {jobs.map((job) => (
-          <div className="dark:bg-blue-800 border-solid border-2 w-[1000px] items-center mx-60 h-[200px] mb-20 ">
-            <div className=" flex items-center gap-20 ml-5  ">
-              <Image width={100} height={100} src={Logo} />
-              <p className="font-black mb-10 ml-24">{job.title}</p>
-              <p className="ml-56">{job.date}</p>
-            </div>
-            <div>
-              <li className="w-[700px] ml-72 ">{job.description} </li>
-            </div>
-          </div>
-        ))}
+        <div className="mt-20 justify-center flex">
+          <button className="px-4 bg-gray-300 text-black rounded-lg h-8 mt-20">
+            Experience
+          </button>
+        </div>
+        <div className="items-center text-center mt-10 mb-10">
+          <p>Here is a quick summary of my most recent experiences</p>
+        </div>
       </div>
+      {experience.map((exp) => {
+        return (
+          <Experiencecard
+            title={exp.title}
+            description={exp.description}
+            date={exp.date}
+          />
+        );
+      })}
     </div>
   );
-};
 
-{
   /* <div>
 <Up
   imgSrc={Logo}
@@ -89,4 +83,4 @@ export const Experience = () => {
   Date="Dec 2015-May 2017 - Present"
 />
 </div> */
-}
+};

@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Abs from "../images/abs.jpg";
+
 export function About() {
   return (
-    <div className="dark:bg-blue-950">
+    <div className="dark:bg-blend-darken w-[1280] h-[634]">
       <div className=" flex justify-center">
         <button className="text-center px-4 bg-gray-200 text-black rounded-lg h-10 mt-24 ">
           About me
         </button>
       </div>
-      <div className="flex items-start mt-10 ml-52">
+      <div className="flex items-start justify-center">
         <div className="flex-shrink-0">
           <Image src={Abs} width={400} height={400} alt="About Me" />
         </div>

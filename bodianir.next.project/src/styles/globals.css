@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-button {
+:root {
+  --Gray-Dark-50: #111827;
 }
-
 /*:root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
