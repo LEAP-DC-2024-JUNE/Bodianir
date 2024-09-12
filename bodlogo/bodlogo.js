@@ -119,11 +119,59 @@ console.log(stringItUp([2, 5, 100]));
 // }
 
 // console.log(capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"]));
-function Name(array) {
-  const result = array.map((capital) => {
-    return capital.charAt(0).toUpperCase() + capital.slice(1).toLowerCase();
-  });
-  return result;
+// function Name(array) {
+//   const result = array.map((capital) => {
+//     return capital.charAt(0).toUpperCase() + capital.slice(1).toLowerCase();
+//   });
+//   return result;
+// }
+
+// console.log(Name(["andy", "Bro,", "leETCOde"]));
+
+// function namesOnly(arr) {
+//   const result = arr.map(() => {
+//     if (age < 79) console.log("you can go to matrix");
+//     else {
+//       console.log("under age");
+//     }
+//   });
+// }
+
+// console.log(
+// namesOnly([
+//   {
+//     name: "Angelina Jolie",
+//     age: 80,
+//   },
+//   {
+//     name: "Eric Jones",
+//     age: 2,
+//   },
+//   {
+//     name: "Paris Hilton",
+//     age: 5,
+//   },
+//   {
+//     name: "Kayne West",
+//     age: 16,
+//   },
+//   {
+//     name: "Bob Ziroll",
+//     age: 100,
+//   },
+// ]);
+
+let ae = 18;
+if (ae <= 17) {
+  console.log("Nasand hursen");
+} else {
+  console.log("nasand hureegui");
 }
 
-console.log(Name(["andy", "Bro,", "leETCOde"]));
+let number = 11;
+
+if (number % 2 === 0) {
+  console.log("even number");
+} else {
+  console.log("odd number");
+}
