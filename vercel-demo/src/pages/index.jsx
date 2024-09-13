@@ -3,6 +3,9 @@
 // import { Class } from "../components/class";
 import { Render } from "../components/Render";
 import { Second } from "../components/Second";
+import { Davtalt } from "../components/davtalt";
+import { Third } from "../components/Third";
+import { Fourth } from "../components/fourth";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -51,8 +54,11 @@ const Bodlogo = () => {
     last: "Turmunkh",
   };
   const LoggedIn = true;
-  const role = "klk";
-
+  const role = "admin";
+  const cons = "admin";
+  const isVIP = true;
+  const isLoggedIn = true;
+  const items = ["Item 1", "Item 2", "Item 3"];
   return (
     <div>
       {" "}
@@ -61,6 +67,9 @@ const Bodlogo = () => {
       {obj.name === "Bodianir" && obj.last === "Turmunkh" && <div>Welcome</div>}
       {obj.name !== "Bodianir" ||
         (obj.last !== "Turmunkh" && <div>Nevtreh erhgui bna</div>)}
+      <Davtalt con={cons} />
+      <Third isVIP={isVIP} isLoggedIn={isLoggedIn} />
+      <Fourth items={items} />
     </div>
   );
 };

@@ -1,5 +1,39 @@
-export const Davtalt = ({ ab }) => {
-  return <div>{"admin" == "AdminDashboard"}</div>;
+// export const Davtalt = ({ davt }) => {
+//   let messages = "";
+//   switch (davt) {
+//     case "admin":
+//       messages = "adminshvde";
+//       break;
+//     case "user":
+//       messages = "usershvde";
+//       break;
+//     default:
+//       messages = "wrong user";
+//       break;
+//   }
+//   return <p>{messages}</p>;
+// };
+
+export const Davtalt = ({ con }) => {
+  if (con === "admin") {
+    return (
+      <div>
+        <p>Aaddss</p>
+      </div>
+    );
+  } else if (con === "user") {
+    return (
+      <div>
+        <p>Usershd</p>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <p>Wrong user</p>
+      </div>
+    );
+  }
 };
 // Exercise 2: Conditional Rendering Based on User Role
 
