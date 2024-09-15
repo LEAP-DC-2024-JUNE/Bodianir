@@ -30,7 +30,7 @@ export const Experience = () => {
     },
   ];
   return (
-    <div className="bg-customDark">
+    <div className="dark:bg-customDark bg-gray-200">
       <div>
         <div className="mt-20 justify-center flex">
           <button className="px-4 bg-gray-300 text-black rounded-lg h-8 mt-20">

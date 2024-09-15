@@ -3,6 +3,7 @@ import Sun from "../icons/Sun";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import Burger from "../icons/Burger";
+import Closing from "../components/Close";
 
 export const Headercard = () => {
   const { setTheme, theme } = useTheme();
@@ -19,9 +20,17 @@ export const Headercard = () => {
     <div className="flex justify-between items-center p-4 mb-44">
       <p className="text-4xl font-black">ANDY</p>
       <div className="flex items-center space-x-4">
-        <button className="w-6 h-6 md:hidden md:float-right">
+        <button className="w-6 h-6 md:hidden md:float-right z-1000">
           <Burger />
         </button>
+        <div
+          id="sidebar"
+          class="fixed md:top-0 md:left-0 w-64 h-full bg-gray-800 text-white transform -translate-x-full transition-transform duration-300 ease-in-out"
+        >
+          <button id="close-menu" class="absolute top-4 right-4 text-white">
+            <Closing />
+          </button>
+        </div>
         <div className=" md:flex items-center space-x-4">
           <button className="px-4">About</button>
           <button className="px-4">Work</button>
