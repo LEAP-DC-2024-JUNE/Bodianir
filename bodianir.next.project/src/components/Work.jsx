@@ -43,7 +43,7 @@ export const Work = () => {
         "Storybook",
         "Git",
       ],
-      reverse: true, // Flag to reverse layout for Mentorhub
+      reverse: true,
     },
     {
       title: "Itoim",
