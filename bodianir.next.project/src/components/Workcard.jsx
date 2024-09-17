@@ -5,30 +5,18 @@ export const WorkCard = (props) => {
 
   return (
     <div>
-      <div className="mt-20 justify-center flex">
-        <button className="px-4 bg-gray-300 text-black rounded-lg h-8 mt-20">
-          Experience
-        </button>
-      </div>
-      <div className="items-center text-center mt-10 mb-10">
-        <p>Here is a quick summary of my most recent experiences</p>
-      </div>
-      <div className="flex flex-col mb-8 items-center">
+      <div className="flex flex-col mb-8 items-center lg:mx-40">
         <div
           className={`flex ${
             reverse ? "flex-col-reverse" : "flex-col"
           } sm:flex-row items-center w-full`}
         >
-          <div
-            className={`flex-shrink-0 w-full sm:w-1/2 ${
-              reverse ? "order-last" : ""
-            }`}
-          >
+          <div className={`w-full sm:w-1/2 ${reverse ? "order-last" : ""}`}>
             <Image
               src={img}
               width={500}
               height={500}
-              className="mb-4 sm:mb-0"
+              className="mb-4 sm:mb-0 bg-gray-100 border-y-8 border-x-8"
               alt={title}
             />
           </div>
@@ -41,7 +29,7 @@ export const WorkCard = (props) => {
               {buttons.map((tech, idx) => (
                 <button
                   key={idx}
-                  className="px-4 py-2 bg-gray-300 text-black rounded-lg"
+                  className="px-4 py-2 bg-gray-300 bg-cover text-black rounded-lg"
                 >
                   {tech}
                 </button>

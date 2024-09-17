@@ -3,7 +3,7 @@ export const Experience = () => {
   const experience = [
     {
       title: "Sr.Frontend Developer",
-      description: [
+      descriptions: [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Ut pretium arcu et massa semper, id fringilla leo semper.",
         "Sed quis justo ac magna.",
@@ -13,7 +13,7 @@ export const Experience = () => {
     },
     {
       title: "Team Lead",
-      description: [
+      descriptions: [
         "Sed quis justo ac magna.",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Sed quis justo ac magna.",
@@ -23,16 +23,16 @@ export const Experience = () => {
     },
     {
       title: "Full Stack Developer",
-      description: [
+      descriptions: [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
       ],
       date: "Dec 2015-May 2017 - Present",
     },
   ];
   return (
-    <div className="dark:bg-customDark bg-gray-200">
+    <div className="dark:bg-customDark bg-gray-50 pb-20 pl:0 ">
       <div>
-        <div className="mt-20 justify-center flex">
+        <div className="lg:justify-center lg:flex ">
           <button className="px-4 bg-gray-300 text-black rounded-lg h-8 mt-20">
             Experience
           </button>
@@ -45,7 +45,7 @@ export const Experience = () => {
         return (
           <Experiencecard
             title={exp.title}
-            description={exp.description}
+            descriptions={exp.descriptions}
             date={exp.date}
           />
         );

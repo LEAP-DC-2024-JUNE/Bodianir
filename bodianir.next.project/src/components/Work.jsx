@@ -68,6 +68,14 @@ export const Work = () => {
 
   return (
     <div>
+      <div className="items-center text-center mt-10 mb-10">
+        <button className="px-4 bg-gray-300 text-black  rounded-lg h-8 mt-20">
+          Experience
+        </button>
+        <div className="items-center text-center mt-10 mb-10">
+          <p>Here is a quick summary of my most recent experiences</p>
+        </div>
+      </div>
       {works.map((work, index) => {
         return (
           <WorkCard

@@ -15,7 +15,7 @@ import Cypress from "../images/Cypress.jpg";
 import Story from "../images/Story.jpg";
 import Git from "../images/Git.jpg";
 import { Skillcard } from "../components/Skillcard";
-export const Skill = ({}) => {
+export const Skill = () => {
   const logos = [
     {
       imgSrc: Java,
@@ -85,14 +85,16 @@ export const Skill = ({}) => {
   ];
   return (
     <div>
-      <div className="items-center flex flex-col gap-10 justify-center mt-20 ">
-        <button className="  bg-gray-500 text-white rounded-lg ">Skills</button>
+      <div className="items-center flex flex-col gap-10 justify-center pt-20 pb-20 ">
+        <button className="  bg-gray-300 text-black rounded-lg w-[65px] ">
+          Skills
+        </button>
         <p className="mb-4">
           The skills, tools and technologies I am really good at:
         </p>
       </div>
 
-      <div className="flex flex-wrap gap-20 mx-56 sm:w-[400px]">
+      <div className="flex flex-wrap gap-10 lg:mx-44">
         {logos.map((logo, index) => (
           <Skillcard title={logo.title} key={index} img={logo.imgSrc} />
         ))}

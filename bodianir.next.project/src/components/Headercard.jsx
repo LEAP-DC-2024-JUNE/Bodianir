@@ -23,11 +23,11 @@ export const Headercard = () => {
         <button className="w-6 h-6 md:hidden md:float-right z-1000">
           <Burger />
         </button>
-        <div
-          id="sidebar"
-          class="fixed md:top-0 md:left-0 w-64 h-full bg-gray-800 text-white transform -translate-x-full transition-transform duration-300 ease-in-out"
-        >
-          <button id="close-menu" class="absolute top-4 right-4 text-white">
+        <div>
+          <button
+            id="close-menu"
+            class="absolute top-4 right-4 text-white md:hidden"
+          >
             <Closing />
           </button>
         </div>

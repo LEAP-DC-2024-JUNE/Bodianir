@@ -9,10 +9,12 @@ import { Work } from "../components/Work";
 import { Mentor } from "../components/Workcard";
 import { Itoim } from "../components/Itoim";
 import { End } from "../components/End";
+import { Bodlogo } from "../components/Bodlogo";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const array = [];
   return (
     <div>
       <Header />
@@ -22,6 +24,7 @@ export default function Home() {
       <Experience />
       <Work />
       <End />
+      {/* <Bodlogo data={array} /> */}
     </div>
   );
 }

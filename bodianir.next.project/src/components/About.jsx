@@ -3,9 +3,9 @@ import Abs from "../images/abs.jpg"; // Update the path to your image if necessa
 
 export function About() {
   return (
-    <div className="flex flex-col items-center mt-40 gap-12 dark:bg-customDark pt-10 bg-gray-200">
+    <div className="flex flex-col items-center mt-40 gap-12 dark:bg-customDark pt-10 bg-gray-50 pb-20">
       <div className="text-center mb-10">
-        <button className="px-6 py-2 bg-gray-500 text-white rounded-lg ">
+        <button className="px-6 py-2 bg-gray-300 text-black rounded-lg ">
           About Me
         </button>
       </div>
