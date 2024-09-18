@@ -10,8 +10,9 @@ import { Mentor } from "../components/Workcard";
 import { Itoim } from "../components/Itoim";
 import { End } from "../components/End";
 import { Bodlogo } from "../components/Bodlogo";
-import { State } from "../components/State";
-import { Number, Onoff } from "../components/Number";
+import { State, Same, Last } from "../components/State";
+import { Number } from "../components/Number";
+import { Menu } from "../components/Menu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,18 +20,20 @@ export default function Home() {
   const array = [];
   return (
     <div>
-      {/* <Number />
-      <Onoff /> */}
-      {/* <State /> */}
+      <State />
+      <Number />
+      <Same />
+      <Last />
+      {/* <State />
 
-      <Header />
+      {/* <Header />
       <Nav />
       <About />
       <Skill />
       <Experience />
       <Work />
       <End />
-      {/* <Bodlogo data={array} /> */}
+      <Bodlogo data={array} /> */}
     </div>
   );
 }
