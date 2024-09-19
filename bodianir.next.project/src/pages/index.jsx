@@ -20,20 +20,19 @@ export default function Home() {
   const array = [];
   return (
     <div>
-      <State />
+      {/* <State />
       <Number />
       <Same />
       <Last />
-      {/* <State />
-
-      {/* <Header />
+      {/* <State /> */}
+      <Header />
       <Nav />
       <About />
       <Skill />
       <Experience />
       <Work />
       <End />
-      <Bodlogo data={array} /> */}
+      {/* // <Bodlogo data={array} /> */}
     </div>
   );
 }

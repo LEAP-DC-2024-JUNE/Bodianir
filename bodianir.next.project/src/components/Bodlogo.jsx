@@ -11,6 +11,6 @@
 //     </div>
 //   );
 // };
-//1.Array hooson bish esehiig shalgah
-//2.Condition bichih array hooson bish bh ued
-//3.No item gedegee butsaah
+// 1.Array hooson bish esehiig shalgah
+// 2.Condition bichih array hooson bish bh ued
+// 3.No item gedegee butsaah

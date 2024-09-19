@@ -94,7 +94,7 @@ export const Skill = () => {
         </p>
       </div>
 
-      <div className="flex flex-wrap gap-10 lg:mx-44">
+      <div className="flex flex-wrap gap-10 lg:mx-44ve">
         {logos.map((logo, index) => (
           <Skillcard title={logo.title} key={index} img={logo.imgSrc} />
         ))}
