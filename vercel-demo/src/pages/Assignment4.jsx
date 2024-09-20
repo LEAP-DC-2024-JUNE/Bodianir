@@ -15,7 +15,7 @@ import { useState } from "react";
 //   { name: "Tablet", price: 400, available: true },
 // ];
 const Assignment4 = () => {
-  const [Unen, hudal] = useState(true);
+  const [Unen, hudal] = useState("");
   const products = [
     { name: "Laptop", price: 1200, available: true },
     { name: "Phone", price: 800, available: false },
@@ -24,26 +24,22 @@ const Assignment4 = () => {
   const availableProducts = products.filter((product) => {
     return product.available == Unen;
   });
-  const Hudal = () => {
-    hudal(false);
-  };
-  const click = () => {
-    hudal(true);
+  const handleClick = (param1) => {
+    hudal(param1);
   };
 
   return (
     <div>
       <div>
-        <button onClick={Hudal}>Return false</button>
+        <button onClick={() => handleClick(false)}>Return false</button>
       </div>
       <div>
-        {" "}
-        <button onClick={click}>Return true</button>
+        <button onClick={() => handleClick(true)}>Return true</button>
       </div>
       <div>Filter Products by Availability</div>
-      {availableProducts.map((product) => {
+      {availableProducts.map((product, index) => {
         return (
-          <div>
+          <div key={index}>
             <p>{product.name}</p>
             <p>{product.price}</p>
           </div>

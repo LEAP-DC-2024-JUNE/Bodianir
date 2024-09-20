@@ -117,9 +117,9 @@ export default function Array() {
       <button onClick={Click}>Nasand hursen humus</button>
       <div>
         <h1>nasand hursen hun</h1>
-        {filteredArray.map((person) => {
+        {filteredArray.map((person, index) => {
           return (
-            <div>
+            <div key={index}>
               <p>{person.name}</p>
               <p>{person.age}</p>
             </div>

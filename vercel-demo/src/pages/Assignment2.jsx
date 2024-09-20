@@ -2,28 +2,28 @@ import { useState } from "react";
 
 const Assignment2 = () => {
   const array = ["apple", "banana", "kiwi", "pear"];
-  const [two, four] = useState("4");
+  const [two, four] = useState("0");
   const filterByLength = array.filter((word) => {
     return word.length > two;
   });
-  const clickfour = () => {
-    four(4);
-  };
-  const clicktwo = () => {
-    four(2);
+  const handleChangeValue = (param1) => {
+    four(param1);
   };
 
   return (
     <div>
       <div>Filter by length more than 4 words</div>
       <div>
-        <button onClick={clickfour}>4</button>
+        <button onClick={() => handleChangeValue(4)}>4</button>
       </div>
       <div>
-        <button onClick={clicktwo}>2</button>
+        <button onClick={() => handleChangeValue(2)}>2</button>
       </div>
-      {filterByLength.map((word) => {
-        return <p>{word}</p>;
+      <div>
+        <button onClick={() => handleChangeValue(5)}>5</button>
+      </div>
+      {filterByLength.map((word, index) => {
+        return <p key={index}>{word}</p>;
       })}
     </div>
   );

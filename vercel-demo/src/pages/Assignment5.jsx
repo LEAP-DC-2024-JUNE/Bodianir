@@ -19,7 +19,7 @@ import { useState } from "react";
 // console.log(filterPassingStudents(students));
 // // [{ name: "Bob", grade: 72 }, { name: "Charlie", grade: 85 }]
 const Assignment5 = () => {
-  const [grade, setGrade] = useState(60);
+  const [grade, setGrade] = useState(false);
   const students = [
     { name: "Alice", grade: 58 },
     { name: "Bob", grade: 72 },
@@ -27,23 +27,25 @@ const Assignment5 = () => {
     { name: "David", grade: 45 },
   ];
   const filterPassingStudents = students.filter((student) => {
-    return student.grade >= grade;
+    return grade ? student.grade >= 60 : student.grade <= 60;
   });
   const Line = () => {
-    setGrade(setGrade < 60);
+    setGrade(false);
   };
   const Passed = () => {
-    setGrade(60);
+    setGrade(true);
   };
   console.log(setGrade);
   return (
     <div>
       <div>Filter by passing students</div>
-      {filterPassingStudents.map((student) => {
+      {filterPassingStudents.map((student, index) => {
         return (
-          <div>
+          <div key={index}>
             <div>
               <button onClick={Line}>Not </button>
+            </div>
+            <div>
               <button onClick={Passed}>Passed</button>
             </div>
             <div>

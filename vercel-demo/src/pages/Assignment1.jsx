@@ -2,28 +2,28 @@ import { useState } from "react";
 
 const Assignment1 = () => {
   const array = [1, 2, 3, 4, 5, 6];
-  const [odd, even] = useState(2);
+  const [isodd, even] = useState(true);
   const evenNumberArray = array.filter((number) => {
-    return number % odd == 0;
+    return isodd ? number % 2 === 0 : number % 2 === 1;
   });
-  const Tegshtoo = () => {
-    even(2);
+  const TegshToo = () => {
+    even(true);
   };
   const Sondgoitoo = () => {
-    even(1);
+    even(false);
   };
 
   return (
     <div>
       <div>
-        <button onClick={Tegshtoo}>Tegsh too</button>
+        <button onClick={TegshToo}>Tegsh too</button>
       </div>
       <div>
         <button onClick={Sondgoitoo}>Sondgoitoo</button>
       </div>
       <div>Filter Even Numbers </div>
-      {evenNumberArray.map((number) => {
-        return <p>{number}</p>;
+      {evenNumberArray.map((number, index) => {
+        return <p key={index}>{number}</p>;
       })}
     </div>
   );
