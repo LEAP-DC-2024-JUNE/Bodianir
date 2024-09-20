@@ -23,37 +23,30 @@ export const Headercard = () => {
 
   return (
     <div className="flex justify-between items-center p-4 mb-44">
-      <p className="text-4xl font-black lg:hidden mb-20">ANDY</p>
+      <p className="text-4xl font-black sm:block hidden mb-20">ANDY</p>
       <div className="flex items-center space-x-4">
         <button
-          id="close-menu"
-          className={`absolute top-0 right-4 text-white  ${
-            isVisible ? "block" : "hidden"
-          }`}
-          onClick={() => setIsVisible(false)}
-        >
-          <Closing />
-        </button>
-        <button
-          className="w-6 h-6 sm:hidden"
+          className="w-6 h-6 sm:hidden sm:right-0 "
           onClick={() => setIsVisible(!isVisible)}
         >
           {isVisible ? <Closing /> : <Burger />}
         </button>
 
         {isVisible && (
-          <div className="absolute flex flex-col top-10 left-0 w-full dark:bg-gray-800 bg-white text-black dark:text-black h-[800px] p-4">
+          <div className="absolute flex flex-col top-10 right-0 w-full dark:bg-black bg-white text-black dark:text-black h-[800px] p-4">
             <div className="flex  w-full mb-4">
               <p className="text-4xl dark:text-white text-black font-black">
                 ANDY
               </p>
             </div>
-            <button className="px-4 dark:text-white text-black">About</button>
-            <button className="px-4 dark:text-white text-black">Work</button>
-            <button className="px-4 dark:text-white text-black">
+            <button className="mr-96 dark:text-white text-black">About</button>
+            <button className="mr-96 dark:text-white text-black">Work</button>
+            <button className="mr-96 dark:text-white text-black">
               Testimonials
             </button>
-            <button className="px-4 dark:text-white text-black">Contact</button>
+            <button className="mr-96 dark:text-white text-black">
+              Contact
+            </button>
             <button
               onClick={toggleTheme}
               className="flex items-center text-black dark:text-white"
