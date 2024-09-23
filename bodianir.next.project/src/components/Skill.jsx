@@ -6,7 +6,7 @@ import Node from "../images/Node.jpg";
 import Express from "../images/Express.jpg";
 import Nest from "../images/Nest.jpg";
 import Socket from "../images/Socket.jpg";
-import Post from "../images/post.png";
+import Post from "../images/Post.png";
 import Mongo from "../images/Mongo.png";
 import Sass from "../images/Sass.png";
 import Tailwind from "../images/Vector.png";
