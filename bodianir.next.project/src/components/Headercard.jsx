@@ -1,10 +1,11 @@
-import Shift from "../icons/Shift";
+import Shift from "../icons/shift";
 import Sun from "../icons/Sun";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import Burger from "../icons/Burger";
 import Closing from "../components/Close";
 import { Menu } from "../components/Menu";
+import Tovch from "../components/Tovch";
 
 export const Headercard = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,59 +21,26 @@ export const Headercard = () => {
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
-
   return (
-    <div className="flex justify-between items-center p-4 mb-44">
-      <p className="text-4xl font-black sm:block hidden mb-20">ANDY</p>
-      <div className="flex items-center space-x-4">
-        <button
-          className="w-6 h-6 sm:hidden sm:right-0 "
-          onClick={() => setIsVisible(!isVisible)}
-        >
-          {isVisible ? <Closing /> : <Burger />}
+    <div className="flex-row pl-10 mt-10">
+      <div className="flex gap-40">
+        <p className="text-4xl font-black ">ANDY</p>
+        <Tovch />{" "}
+      </div>
+
+      <div className="flex flex-row gap-20 pl-96 mb-20">
+        <button className="hidden sm:block">About</button>
+        <button className="hidden sm:block">Work</button>
+        <button className="hidden sm:block">Testimonials</button>
+        <button className="hidden sm:block">Contact</button>
+        <button onClick={toggleTheme} className="items-center hidden sm:block">
+          Switch theme
+          {theme === "dark" ? <Sun /> : <Shift />}
         </button>
 
-        {isVisible && (
-          <div className="absolute flex flex-col top-10 right-0 w-full dark:bg-black bg-white text-black dark:text-black h-[800px] p-4">
-            <div className="flex  w-full mb-4">
-              <p className="text-4xl dark:text-white text-black font-black">
-                ANDY
-              </p>
-            </div>
-            <button className="mr-96 dark:text-white text-black">About</button>
-            <button className="mr-96 dark:text-white text-black">Work</button>
-            <button className="mr-96 dark:text-white text-black">
-              Testimonials
-            </button>
-            <button className="mr-96 dark:text-white text-black">
-              Contact
-            </button>
-            <button
-              onClick={toggleTheme}
-              className="flex items-center text-black dark:text-white"
-            >
-              Switch theme
-              {theme === "dark" ? <Sun /> : <Shift />}
-            </button>
-            <button className="px-4 dark:bg-white bg-customDark dark:text-black text-white rounded-lg h-10">
-              Download CV
-            </button>
-          </div>
-        )}
-
-        <div className="md:flex items-center space-x-4 hidden lg:flex">
-          <button className="px-4">About</button>
-          <button className="px-4">Work</button>
-          <button className="px-4">Testimonials</button>
-          <button className="px-4">Contact</button>
-          <button onClick={toggleTheme} className="flex items-center">
-            Switch theme
-            {theme === "dark" ? <Sun /> : <Shift />}
-          </button>
-          <button className="px-4 bg-white text-black rounded-lg h-10">
-            Download CV
-          </button>
-        </div>
+        <button className="bg-white text-black rounded-lg h-10 w-40 hidden sm:block">
+          Download CV
+        </button>
       </div>
     </div>
   );
