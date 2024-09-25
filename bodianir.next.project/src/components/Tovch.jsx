@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Burgericon from "../icons/Burger";
 import Close from "../components/Close";
-import Shift from "../icons/Shift";
+import Shift from "../icons/shift";
 import Sun from "../icons/Sun";
+import { useTheme } from "next-themes";
 
 const Menu = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [theme, setTheme] = useState();
-
+  const { setTheme, theme } = useTheme();
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
@@ -25,7 +25,7 @@ const Menu = () => {
         {isVisible && (
           <div className="absolute flex flex-col top-10 right-0 pl-40 mt-10 w-full dark:bg-black bg-white text-black dark:text-black h-[800px] p-4">
             <div className="flex w-full mb-4"></div>
-            <button className="mr-96 dark:text-white text-black text-2xl">
+            <button className="pr-96 dark:text-white text-black text-2xl">
               About
             </button>
             <button className="mr-96 dark:text-white text-black text-2xl">
@@ -39,11 +39,12 @@ const Menu = () => {
             </button>
             <button
               onClick={toggleTheme}
-              className="flex items-center text-black dark:text-white text-2xl"
+              className="mr-96 dark:text-white text-black text-2xl w-[150px]  "
             >
               Switch theme
-              {theme === "light" ? <Sun /> : <Shift />}
+              {theme === "dark" ? <Sun /> : <Shift />}
             </button>
+
             <button className="px-4 dark:bg-white bg-customDark dark:text-black text-white rounded-lg h-10 text-2xl">
               Download CV
             </button>
