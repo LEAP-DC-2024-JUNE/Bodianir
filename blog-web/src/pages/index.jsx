@@ -1,18 +1,13 @@
-import {
-  Trendingcard,
-  Blogcard,
-  Carouselcard,
-  Footer,
-  Header,
-} from "../components";
+import { Blogcardcontainer } from "@/components/Blogcardcontainer";
+import { Header } from "@/components/Header";
+import React, { useState } from "react";
+
 export default function Home() {
+  const [inputvalue, setinputvalue] = useState("");
   return (
-    <div>
-      <Header />
-      <Blogcard />
-      <Trendingcard />
-      <Footer />
-      <Carouselcard />
+    <div className="bg-white text-black flex flex-col">
+      <Header setinputvalue={setinputvalue} />
+      <Blogcardcontainer inputvalue={inputvalue} />
     </div>
   );
 }

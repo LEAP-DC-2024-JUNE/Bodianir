@@ -18,22 +18,27 @@ export const Blogcardcontainer = ({ inputvalue }) => {
     card.title.toLowerCase().includes(inputvalue.toLowerCase())
   );
   return (
-    <div className="flex flex-wrap justify-center mt-40 px-10 gap-10">
-      {filteredcards.map((card) => {
-        return (
-          <div>
-            <button className="border-3 rounded-2xl w-[100px] bg-gray-300 text-blue-700">
-              Technology
-            </button>
-
-            <Blogcard
-              imgSrc={card.social_image}
-              username={card.user.username}
-              title={card.title}
-            />
-          </div>
-        );
-      })}
+    <div>
+      <p className="mt-20 pl-36 font-black">All Blog Post</p>
+      <div className="flex flex-wrap justify-center mt-20 px-10 gap-10">
+        {filteredcards.map((card) => {
+          return (
+            <div>
+              <Blogcard
+                imgSrc={card.social_image}
+                username={card.user.username}
+                title={card.title}
+              />
+              <button className="border-3 rounded-2xl w-[100px] bg-gray-300 text-blue-700">
+                Technology
+              </button>
+            </div>
+          );
+        })}
+        <button className="mt-20 mr-44 border-2 w-[100px] h-[50px] text-center mb-20">
+          Load More
+        </button>
+      </div>
     </div>
   );
 };
