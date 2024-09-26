@@ -13,10 +13,13 @@ export const Blogcardcontainer = () => {
     fetchArticles();
   }, []);
   return (
-    <div>
+    <div className="flex flex-wrap justify-center mt-40 px-10">
       {cards.map((card) => {
         return (
           <div>
+            <button className="border-3 rounded-2xl w-[100px] bg-gray-300 text-blue-700">
+              Technology
+            </button>
             <Blogcard
               imgSrc={card.social_image}
               username={card.user.username}
