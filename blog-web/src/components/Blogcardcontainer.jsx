@@ -17,6 +17,12 @@ export const Blogcardcontainer = ({ inputvalue }) => {
   const filteredcards = cards.filter((card) =>
     card.title.toLowerCase().includes(inputvalue.toLowerCase())
   );
+  if (filteredcards.length == 0)
+    return (
+      <div className="flex justify-center mt-44 mb-44">
+        <p className="text-2xl">Not found</p>
+      </div>
+    );
   return (
     <div>
       <p className="mt-20 pl-36 font-black">All Blog Post</p>

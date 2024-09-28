@@ -18,6 +18,7 @@ export const Header = ({ setinputvalue }) => {
         onChange={(event) => setinputvalue(event.target.value)}
         placeholder="Search..."
       />
+
       <div className="absolute right-2 pr-28">
         <button>
           <Search />
