@@ -8,7 +8,6 @@ export const Blogcardcontainer = ({ inputvalue }) => {
       .then((first) => first.json())
       .then((data) => setCards(data));
   };
-  console.log(cards);
 
   useEffect(() => {
     fetchArticles();
@@ -34,10 +33,9 @@ export const Blogcardcontainer = ({ inputvalue }) => {
                 imgSrc={card.social_image}
                 username={card.user.username}
                 title={card.title}
+                description={card.description}
+                tags={card.tags}
               />
-              <button className="border-3 rounded-2xl w-[100px] bg-gray-300 text-blue-700">
-                Technology
-              </button>
             </div>
           );
         })}
