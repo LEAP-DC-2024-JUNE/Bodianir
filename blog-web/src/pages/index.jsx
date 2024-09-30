@@ -8,6 +8,7 @@ export default function Home() {
     <div className="bg-white text-black flex flex-col">
       <Header setinputvalue={setinputvalue} />
       <Blogcardcontainer inputvalue={inputvalue} />
+      <p>BLog on process</p>
     </div>
   );
 }
