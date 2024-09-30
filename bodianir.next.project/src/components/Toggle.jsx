@@ -1,4 +1,4 @@
-import Shift from "../icons/Shift";
+import Shift from "../icons/Image15";
 import Sun from "../icons/Sun";
 import { useTheme } from "next-themes";
 

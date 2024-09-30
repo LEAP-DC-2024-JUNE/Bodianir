@@ -1,6 +1,6 @@
-import { Mail } from "../icons/Mail";
-import { Call } from "../icons/Call";
-import { Last } from "../icons/Last";
+import { Mail } from "../icons/EmailLogo";
+import { Call } from "../icons/Image1";
+import { Last } from "../icons/Image7";
 export const End = () => {
   return (
     <div>

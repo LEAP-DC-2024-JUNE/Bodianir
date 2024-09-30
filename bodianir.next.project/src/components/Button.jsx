@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Burgericon from "../icons/Burger";
-import Close from "../components/Close";
-import Shift from "../icons/shift";
+import Close from "./Close";
+import Shift from "../icons/Image15";
 import Sun from "../icons/Sun";
 import { useTheme } from "next-themes";
 

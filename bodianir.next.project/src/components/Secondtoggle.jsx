@@ -1,7 +1,7 @@
-import Shift from "../icons/Shift";
+import Shift from "../icons/Image15";
 import Sun from "../icons/Sun";
 import { useTheme } from "next-themes";
-import Closing from "../components/Close";
+import Closing from "./Close";
 import { useState } from "react";
 
 export const Menu = () => {

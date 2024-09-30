@@ -28,7 +28,7 @@ export const WorkCard = (props) => {
             <div className="flex flex-wrap gap-3">
               {buttons.map((tech, idx) => (
                 <button
-                  key={idx}
+                  key={index}
                   className="px-4 py-2 bg-gray-300 bg-cover text-black rounded-lg"
                 >
                   {tech}

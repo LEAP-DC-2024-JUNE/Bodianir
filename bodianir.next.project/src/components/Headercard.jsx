@@ -1,11 +1,11 @@
-import Shift from "../icons/shift";
+import Shift from "../icons/Image15";
 import Sun from "../icons/Sun";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import Burger from "../icons/Burger";
 import Closing from "../components/Close";
-import { Menu } from "../components/Menu";
-import Tovch from "../components/Tovch";
+import { Menu } from "./Secondtoggle";
+import Tovch from "./Button";
 
 export const Headercard = () => {
   const [isVisible, setIsVisible] = useState(false);

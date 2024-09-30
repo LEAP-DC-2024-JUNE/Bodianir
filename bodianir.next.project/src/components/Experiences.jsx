@@ -1,4 +1,4 @@
-import { Experiencecard } from "../components/Experiencecard";
+import { Experiencecard } from "./Experiencecard";
 export const Experience = () => {
   const experience = [
     {

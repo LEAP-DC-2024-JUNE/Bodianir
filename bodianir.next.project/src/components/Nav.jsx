@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Profile from "../images/profile.jpg";
-import Location from "../icons/location";
-import Dot from "../icons/dot";
-import Logo from "../icons/logo";
+import Location from "../icons/Location";
+import Image3 from "../icons/Image3";
+import Logo from "../icons/Image11";
 
 function Nav() {
   return (
@@ -30,7 +30,7 @@ function Nav() {
           <Location /> Arlington,VA
         </p>
         <p className="mt-5 flex ">
-          <Dot /> Available for new projects
+          <Image3 /> Available for new projects
         </p>
         <p className="mt-10">
           <Logo />
