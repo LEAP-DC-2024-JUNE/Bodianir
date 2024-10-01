@@ -48,6 +48,7 @@ export const Blogcardcontainer = ({ inputvalue }) => {
                 title={card.title}
                 description={card.description}
                 tags={card.tags}
+                date={card.readable_publish_date}
               />
             </div>
           );

@@ -1,4 +1,11 @@
-export const Blogcard = ({ imgSrc, username, title, description, tags }) => {
+export const Blogcard = ({
+  imgSrc,
+  username,
+  title,
+  description,
+  tags,
+  date,
+}) => {
   return (
     <div className="w-[350px]">
       {
@@ -10,13 +17,14 @@ export const Blogcard = ({ imgSrc, username, title, description, tags }) => {
         />
       }
 
-      <button className="border-2 rounded-2xl w-[100px] bg-gray-300 text-blue-700">
+      <span className="rounded-md bg-slate-200 text-sky-600 w-[57px] text-center gap-10">
         {tags}
-      </button>
+      </span>
 
       <h1>{title}</h1>
       <p>{username}</p>
       <p>{description}</p>
+      <p className="font-normal text-base text-slate-500">{date}</p>
     </div>
   );
 };
