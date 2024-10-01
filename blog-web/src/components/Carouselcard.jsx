@@ -1,3 +1,3 @@
 export const Carouselcard = () => {
-  return <div>Carouselcard</div>;
+  return <div className="h-[200px] bg-yellow-800">Carouselcard</div>;
 };

@@ -1,5 +1,6 @@
 import { Logo } from "@/components/Logo";
 import { Search } from "./Search";
+import { Link } from "react-router-dom";
 
 export const Header = ({ setinputvalue }) => {
   return (
@@ -7,9 +8,12 @@ export const Header = ({ setinputvalue }) => {
       <div className="flex-shrink-0 mb-4 md:mb-0 pl-24">
         <Logo />
       </div>
+
       <div className="flex-grow flex justify-center mb-4 md:mb-0">
-        <button className="px-4">Home</button>
         <button className="px-4">Blog</button>
+
+        <button className="px-4">Home</button>
+
         <button className="px-4">Contact</button>
       </div>
       <input
