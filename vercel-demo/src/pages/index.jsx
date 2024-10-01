@@ -7,6 +7,7 @@ import { Davtalt } from "../components/davtalt";
 import { Third } from "../components/Third";
 import { Fourth } from "../components/fourth";
 import { useState } from "react";
+import Home from "../components/10.01";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -113,6 +114,7 @@ export default function Array() {
   return (
     <div className="flex flex-col">
       <p>Nasand hursen humuus</p>
+      <Home />
       <button onClick={Handleclick}>Buh nasnii humus</button>
       <button onClick={Click}>Nasand hursen humus</button>
       <div>
