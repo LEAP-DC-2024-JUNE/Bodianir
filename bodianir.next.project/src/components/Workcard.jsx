@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export const WorkCard = (props) => {
-  const { title, description, img, reverse, buttons, index } = props;
+  const { title, description, img, reverse, buttons, idx } = props;
 
   return (
     <div>
@@ -28,7 +28,7 @@ export const WorkCard = (props) => {
             <div className="flex flex-wrap gap-3">
               {buttons.map((tech, idx) => (
                 <button
-                  key={index}
+                  key={idx}
                   className="px-4 py-2 bg-gray-300 bg-cover text-black rounded-lg"
                 >
                   {tech}
