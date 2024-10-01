@@ -3,22 +3,24 @@ import { Blogcard } from "./Blogcard";
 export const Blogcardcontainer = ({ inputvalue }) => {
   const [cards, setCards] = useState([]);
   const [load, setLoad] = useState(9);
+  const [filter, setFilter] = useState("");
 
   const fetchArticles = () => {
-    fetch(`https://dev.to/api/articles?per_page=${load}`)
+    fetch(`https://dev.to/api/articles?per_page=${load}&tag=${filter}`)
       .then((first) => first.json())
       .then((data) => setCards(data));
   };
-
-  useEffect(() => {
+  const FetchDataUse = () => {
     fetchArticles();
-  }, [load]);
+  };
+  useEffect(FetchDataUse, [load, filter]);
 
   const filteredcards = cards.filter((card) =>
     card.title.toLowerCase().includes(inputvalue.toLowerCase())
   );
+  console.log(filteredcards);
   const loadMore = () => {
-    setLoad(load + 3);
+    setLoad(load);
   };
 
   if (filteredcards.length == 0)
@@ -31,12 +33,10 @@ export const Blogcardcontainer = ({ inputvalue }) => {
     <div>
       <p className="mt-20 pl-36 font-black">All Blog Post</p>
       <div className="flex gap-10 pl-40 pt-10">
-        <button>All</button>
-        <button>Design</button>
-        <button>Travel</button>
-        <button>Fashion</button>
-        <button>Technology</button>
-        <button>Branding</button>
+        <button onClick={() => setFilter("")}>All</button>
+        <button onClick={() => setFilter("javascript")}>Javascript</button>
+        <button onClick={() => setFilter("css")}>Css</button>
+        <button onClick={() => setFilter("next")}>Next.js</button>
       </div>
       <div className="flex flex-wrap justify-center mt-20 px-10 gap-10">
         {filteredcards.map((card) => {
@@ -47,7 +47,7 @@ export const Blogcardcontainer = ({ inputvalue }) => {
                 username={card.user.username}
                 title={card.title}
                 description={card.description}
-                tags={card.tags}
+                tags={card.tag_list}
                 date={card.readable_publish_date}
               />
             </div>

@@ -16,10 +16,13 @@ export const Blogcard = ({
           className="border-2 w-full rounded-2xl"
         />
       }
-
-      <span className="rounded-md bg-slate-200 text-sky-600 w-[57px] text-center gap-10">
-        {tags}
-      </span>
+      {tags.map((tag) => {
+        return (
+          <span className="rounded-md bg-slate-200 text-sky-600 w-[57px] text-center gap-20">
+            {tag}
+          </span>
+        );
+      })}
 
       <h1>{title}</h1>
       <p>{username}</p>
