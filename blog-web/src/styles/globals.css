@@ -25,3 +25,12 @@ body {
     text-wrap: balance;
   }
 }
+@layer components {
+  .button {
+    @apply w-[100px] absolute bottom-0 items-center mb-28 rounded-lg text-white bg-blue-700 text-sm;
+  }
+  .title {
+    @apply w-[270px] absolute bottom-0 mb-3 bg-white bg-opacity-70 text-black
+ font-black p-2;
+  }
+}

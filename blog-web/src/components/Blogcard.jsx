@@ -18,9 +18,9 @@ export const Blogcard = ({
       }
       {tags.map((tag) => {
         return (
-          <span className="rounded-md bg-slate-200 text-sky-600 w-[57px] text-center gap-20">
+          <button className="rounded-md bg-slate-200 text-sky-600 text-center gap-20">
             {tag}
-          </span>
+          </button>
         );
       })}
 

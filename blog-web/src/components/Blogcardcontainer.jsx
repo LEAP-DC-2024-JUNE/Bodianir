@@ -20,7 +20,7 @@ export const Blogcardcontainer = ({ inputvalue }) => {
   );
   console.log(filteredcards);
   const loadMore = () => {
-    setLoad(load);
+    setLoad(load + 3);
   };
 
   if (filteredcards.length == 0)
@@ -36,7 +36,10 @@ export const Blogcardcontainer = ({ inputvalue }) => {
         <button onClick={() => setFilter("")}>All</button>
         <button onClick={() => setFilter("javascript")}>Javascript</button>
         <button onClick={() => setFilter("css")}>Css</button>
-        <button onClick={() => setFilter("next")}>Next.js</button>
+        <button onClick={() => setFilter("nextjs")}>Next.js</button>
+        <button className="ml-96" onClick={() => setFilter("")}>
+          View All
+        </button>
       </div>
       <div className="flex flex-wrap justify-center mt-20 px-10 gap-10">
         {filteredcards.map((card) => {

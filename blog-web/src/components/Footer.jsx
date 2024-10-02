@@ -2,7 +2,7 @@ import { Footerlogo } from "./Footerlogo";
 import { Logo } from "./Logo";
 export const Footer = () => {
   return (
-    <div className="bg-gray-200">
+    <div id="footer" className="bg-gray-200">
       <div className="px-16 flex justify-between ">
         <div className="w-[280px] mt-20 ">
           <p>About</p>

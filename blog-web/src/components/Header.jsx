@@ -1,19 +1,24 @@
 import { Logo } from "@/components/Logo";
 import { Search } from "./Search";
+import Link from "next/link";
 
 export const Header = ({ setinputvalue }) => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-between mt-20">
-      <div className="flex-shrink-0 mb-4 md:mb-0 pl-24">
+      <Link href="/" className="flex-shrink-0 mb-4 md:mb-0 pl-24">
         <Logo />
-      </div>
+      </Link>
 
-      <div className="flex-grow flex justify-center mb-4 md:mb-0">
-        <button className="px-4">Blog</button>
+      <div className="flex-grow flex justify-center px-4 mb-4 md:mb-0">
+        <Link href="/blog">Blog</Link>
 
-        <button className="px-4">Home</button>
+        <Link href="/" className="px-4">
+          Home
+        </Link>
 
-        <button className="px-4">Contact</button>
+        <Link href="#footer" className="px-4">
+          Contact
+        </Link>
       </div>
       <input
         type="text"
