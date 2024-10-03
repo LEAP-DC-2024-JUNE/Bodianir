@@ -46,6 +46,7 @@ export const Blogcardcontainer = ({ inputvalue }) => {
           return (
             <div className="border-2 px-2 pt-2">
               <Blogcard
+                id={card.id}
                 imgSrc={card.social_image}
                 username={card.user.username}
                 title={card.title}

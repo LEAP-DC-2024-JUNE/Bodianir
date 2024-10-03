@@ -17,7 +17,7 @@ export const Footer = () => {
         <div className="mt-20 w-[50px] flex ">
           <p>Home Blog Contact</p>
         </div>
-        <div className="mt-20 ">
+        <div className="mt-40 ">
           <Footerlogo />
         </div>
       </div>
