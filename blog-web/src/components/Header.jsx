@@ -10,11 +10,10 @@ export const Header = ({ setinputvalue }) => {
       </Link>
 
       <div className="flex-grow flex justify-center px-4 mb-4 md:mb-0">
-        <Link href="/blog">Blog</Link>
-
         <Link href="/" className="px-4">
           Home
         </Link>
+        <Link href="/blog">Blog</Link>
 
         <Link href="#footer" className="px-4">
           Contact

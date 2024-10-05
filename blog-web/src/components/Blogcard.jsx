@@ -5,7 +5,7 @@ export const Blogcard = ({
   username,
   title,
   description,
-  tags,
+  type,
   date,
   id,
 }) => {
@@ -20,13 +20,10 @@ export const Blogcard = ({
             className="border-2 w-full rounded-2xl"
           />
         }
-        {tags.map((tag) => {
-          return (
-            <button className="rounded-md bg-slate-200 text-sky-600 text-center gap-20">
-              {tag}
-            </button>
-          );
-        })}
+
+        <button className="rounded-md bg-slate-200 text-sky-600 text-center gap-20">
+          {type}
+        </button>
 
         <h1>{title}</h1>
         <p>{username}</p>

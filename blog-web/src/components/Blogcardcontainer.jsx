@@ -32,7 +32,7 @@ export const Blogcardcontainer = ({ inputvalue }) => {
   return (
     <div>
       <p className="mt-20 pl-36 font-black">All Blog Post</p>
-      <div className="flex gap-10 pl-40 pt-10">
+      <div className="flex gap-10 pl-40 pt-10 font-black">
         <button onClick={() => setFilter("")}>All</button>
         <button onClick={() => setFilter("javascript")}>Javascript</button>
         <button onClick={() => setFilter("css")}>Css</button>
@@ -51,7 +51,7 @@ export const Blogcardcontainer = ({ inputvalue }) => {
                 username={card.user.username}
                 title={card.title}
                 description={card.description}
-                tags={card.tag_list}
+                type={card.type_of}
                 date={card.readable_publish_date}
               />
             </div>
