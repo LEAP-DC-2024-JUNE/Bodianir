@@ -32,7 +32,7 @@ export default function Home() {
   };
   return (
     <div className="bg-white text-black flex flex-col">
-      <Header setinputvalue={setinputvalue} />
+      <Header setinputvalue={setinputvalue} className="mt-48" />
       <Carouselcard article={articles[index]} />
       <div className="flex justify-end pr-44">
         <button onClick={() => HandlePlus()}>
