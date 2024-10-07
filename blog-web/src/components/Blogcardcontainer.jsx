@@ -53,6 +53,7 @@ export const Blogcardcontainer = ({ inputvalue }) => {
                 description={card.description}
                 type={card.type_of}
                 date={card.readable_publish_date}
+                name={card.user.name}
               />
             </div>
           );

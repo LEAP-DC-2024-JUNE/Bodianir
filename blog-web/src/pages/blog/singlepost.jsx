@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components";
 
@@ -7,6 +7,7 @@ const Singlepost = () => {
   const [singlePost, setSinglepost] = useState({});
   const searchParam = useSearchParams();
   const value = searchParam.get("Idselect");
+  const Router = useRouter();
   const fetchData = () => {
     fetch(`https://dev.to/api/articles/${value}`)
       .then((response) => response.json())
@@ -19,8 +20,14 @@ const Singlepost = () => {
     <div className=" flex flex-col items-center ">
       <div className="mb-10">
         <Header />
+        <button
+          className="bg-black text-white  border-2 w-[50px]"
+          onClick={() => Router.back()}
+        >
+          Back
+        </button>
       </div>
-      <div className="mx-auto w-[600px]">
+      <div className="mx-auto w-[800px]">
         <p className="font-black text-4xl bottom-0 pl-10  ">
           {singlePost.title}
         </p>
@@ -35,13 +42,13 @@ const Singlepost = () => {
           <p>{singlePost.readable_publish_date}</p>
         </div>
         <img
-          width={600}
+          width={800}
           height={600}
           src={singlePost.social_image}
           className=""
         />
         <div
-          className="w-[400px]"
+          className="w-[800px]"
           dangerouslySetInnerHTML={{ __html: singlePost.body_html }}
         ></div>
       </div>
