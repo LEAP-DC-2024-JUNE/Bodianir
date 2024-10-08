@@ -6,12 +6,12 @@ import { useRouter } from "next/router";
 export const Header = ({ setinputvalue }) => {
   const router = useRouter();
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between mb-28 mt-10">
+    <div className="flex flex-col md:flex-row items-center justify-between mb-28 mt-10 ">
       <Link href="/" className="flex-shrink-0 mb-4 md:mb-0 pl-24">
         <Logo />
       </Link>
 
-      <div className="flex-grow flex justify-center px-4 mb-4 md:mb-0">
+      <div className="flex-grow flex justify-center px-4 mb-4 ml-96 md:mb-0 gap-10">
         <Link href="/" className="px-4">
           Home
         </Link>

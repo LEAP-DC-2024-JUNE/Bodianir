@@ -2,8 +2,8 @@ import { Footerlogo } from "./Footerlogo";
 import { Logo } from "./Logo";
 export const Footer = () => {
   return (
-    <div id="footer" className="bg-gray-200">
-      <div className="px-16 flex justify-between ">
+    <div id="footer" className="bg-gray-200 ">
+      <div className="px-16 flex justify-between mx-24">
         <div className="w-[280px] mt-20 ">
           <p>About</p>
           <p>
@@ -21,9 +21,10 @@ export const Footer = () => {
           <Footerlogo />
         </div>
       </div>
-      <div className="mt-10 ml-14 flex justify-between gap-10 mb-10 ">
+
+      <div className="mt-10 ml-36 flex justify-between gap-10  ">
         <Logo />
-        <div className="flex gap-10 pr-10">
+        <div className="flex gap-10 pr-10 mr-28">
           <p>Terms of Use</p>
           <p>Privacy Policy</p>
           <p>Cookie Policy</p>

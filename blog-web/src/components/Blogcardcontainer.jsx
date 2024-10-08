@@ -31,15 +31,51 @@ export const Blogcardcontainer = ({ inputvalue }) => {
     );
   return (
     <div>
-      <p className="mt-20 pl-36 font-black">All Blog Post</p>
+      <p className="mt-20 pl-36 font-black text-2xl">All Blog Post</p>
       <div className="flex gap-10 pl-40 pt-10 font-black">
-        <button onClick={() => setFilter("")}>All</button>
-        <button onClick={() => setFilter("javascript")}>Javascript</button>
-        <button onClick={() => setFilter("css")}>Css</button>
-        <button onClick={() => setFilter("nextjs")}>Next.js</button>
-        <button className="ml-96" onClick={() => setFilter("")}>
-          View All
+        <button
+          className={`px-4 py-2 rounded ${
+            filter === "" ? "text-black" : "hover:text-yellow-400"
+          }`}
+          onClick={() => setFilter("")}
+        >
+          All
         </button>
+        <button
+          className={`px-4 py-2 rounded ${
+            filter === "" ? "text-black" : "hover:text-blue-600"
+          }`}
+          onClick={() => setFilter("javascript")}
+        >
+          Javascript
+        </button>
+        <button
+          className={`px-4 py-2 rounded ${
+            filter === "" ? " text-black" : "hover:text-green-600"
+          }`}
+          onClick={() => setFilter("css")}
+        >
+          Css
+        </button>
+        <button
+          className={`px-4 py-2 rounded ${
+            filter === "" ? " text-black" : " hover:text-green-600"
+          }`}
+          onClick={() => setFilter("nextjs")}
+        >
+          Next.js
+        </button>
+        <button
+          className={`px-4 py-2 rounded ${
+            filter === "" ? " text-black" : " hover:text-blue-600"
+          }`}
+          onClick={() => setFilter("branding")}
+        >
+          Branding
+        </button>
+        <div className="ml-auto mr-44">
+          <button onClick={() => setFilter("")}>View All</button>
+        </div>
       </div>
       <div className="flex flex-wrap justify-center mt-20 px-10 gap-10">
         {filteredcards.map((card) => {
@@ -48,10 +84,8 @@ export const Blogcardcontainer = ({ inputvalue }) => {
               <Blogcard
                 id={card.id}
                 imgSrc={card.social_image}
-                username={card.user.username}
                 title={card.title}
-                description={card.description}
-                type={card.type_of}
+                tags={card.tag_list}
                 date={card.readable_publish_date}
                 name={card.user.name}
               />

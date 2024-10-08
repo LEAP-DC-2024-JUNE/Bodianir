@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components";
+import moment from "moment";
 
 const Singlepost = () => {
   const [singlePost, setSinglepost] = useState({});
@@ -18,10 +19,10 @@ const Singlepost = () => {
   }, [value]);
   return (
     <div className=" flex flex-col items-center ">
-      <div className="mb-10">
+      <div className="mb-10 w-full">
         <Header />
         <button
-          className="bg-black text-white  border-2 w-[50px]"
+          className="bg-black text-white mt-10 ml-20 w-[100px]"
           onClick={() => Router.back()}
         >
           Back
@@ -39,7 +40,10 @@ const Singlepost = () => {
             className="rounded-full "
           />
           <p>{singlePost.user?.name}</p>
-          <p>{singlePost.readable_publish_date}</p>
+          <p>
+            {" "}
+            {moment(singlePost.readable_publish_date).format("MMM Do YYYY")}
+          </p>
         </div>
         <img
           width={800}
@@ -48,11 +52,11 @@ const Singlepost = () => {
           className=""
         />
         <div
-          className="w-[800px]"
+          className="w-[800px] mt-20"
           dangerouslySetInnerHTML={{ __html: singlePost.body_html }}
         ></div>
       </div>
-      <div className="mt-10">
+      <div className="mt-10 w-full">
         <Footer />
       </div>
     </div>
