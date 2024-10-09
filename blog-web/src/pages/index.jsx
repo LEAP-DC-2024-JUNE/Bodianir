@@ -5,19 +5,12 @@ import React, { useEffect, useState } from "react";
 import { Carouselcard, Trendingcard } from "@/components";
 import Leftarrow from "../icons/Leftarrow";
 import Rightarrow from "@/icons/RIghtarrow";
+import { Mycontext } from "@/Utilities/context";
+import { useContext } from "react";
 
 export default function Home() {
   const [inputvalue, setinputvalue] = useState("");
-  const [articles, setArticle] = useState([]);
-  const [index, setIndex] = useState(0);
-  const fetchData = () => {
-    fetch(`https://dev.to/api/articles?per_page=6&state=fresh`)
-      .then((response) => response.json())
-      .then((data) => setArticle(data));
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const { articles, index, setIndex } = useContext(Mycontext);
   const HandlePlus = () => {
     setIndex((prevState) =>
       prevState == articles.length - 1 ? 0 : prevState + 1

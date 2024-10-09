@@ -1,19 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Blogcard } from "./Blogcard";
+import { Mycontext } from "@/Utilities/context";
 export const Blogcardcontainer = ({ inputvalue }) => {
-  const [cards, setCards] = useState([]);
-  const [load, setLoad] = useState(9);
-  const [filter, setFilter] = useState("");
-
-  const fetchArticles = () => {
-    fetch(`https://dev.to/api/articles?per_page=${load}&tag=${filter}`)
-      .then((first) => first.json())
-      .then((data) => setCards(data));
-  };
-  const FetchDataUse = () => {
-    fetchArticles();
-  };
-  useEffect(FetchDataUse, [load, filter]);
+  const { cards, setLoad, setFilter, filter, load } = useContext(Mycontext);
 
   const filteredcards = cards.filter((card) =>
     card.title.toLowerCase().includes(inputvalue.toLowerCase())
@@ -34,46 +23,50 @@ export const Blogcardcontainer = ({ inputvalue }) => {
       <p className="mt-20 pl-36 font-black text-2xl">All Blog Post</p>
       <div className="flex gap-10 pl-40 pt-10 font-black">
         <button
-          className={`px-4 py-2 rounded ${
-            filter === "" ? "text-black" : "hover:text-yellow-400"
+          className={`hover:text-yellow-500 hover:cursor-pointer ${
+            filter == "All" ? `text-gray-400` : `text-black`
           }`}
           onClick={() => setFilter("")}
         >
           All
         </button>
         <button
-          className={`px-4 py-2 rounded ${
-            filter === "" ? "text-black" : "hover:text-blue-600"
+          className={`hover:text-yellow-500 hover:cursor-pointer ${
+            filter == "Javascript" ? `text-gray-500` : `text-black`
           }`}
           onClick={() => setFilter("javascript")}
         >
           Javascript
         </button>
         <button
-          className={`px-4 py-2 rounded ${
-            filter === "" ? " text-black" : "hover:text-green-600"
+          className={`hover:text-yellow-500 hover:cursor-pointer ${
+            filter == "css" ? `text-gray-500` : `text-black`
           }`}
           onClick={() => setFilter("css")}
         >
           Css
         </button>
         <button
-          className={`px-4 py-2 rounded ${
-            filter === "" ? " text-black" : " hover:text-green-600"
+          className={`hover:text-yellow-500 hover:cursor-pointer ${
+            filter == "next.js" ? `text-gray-500` : `text-black`
           }`}
           onClick={() => setFilter("nextjs")}
         >
           Next.js
         </button>
         <button
-          className={`px-4 py-2 rounded ${
-            filter === "" ? " text-black" : " hover:text-blue-600"
+          className={`hover:text-yellow-500 hover:cursor-pointer ${
+            filter == "Branding" ? `text-gray-500` : `text-black`
           }`}
           onClick={() => setFilter("branding")}
         >
           Branding
         </button>
-        <div className="ml-auto mr-44">
+        <div
+          className={`ml-auto mr-44 font-black hover:text-yellow-500 hover:cursor-pointer ${
+            filter == "View All" ? `text-gray-500` : `text-black`
+          }`}
+        >
           <button onClick={() => setFilter("")}>View All</button>
         </div>
       </div>

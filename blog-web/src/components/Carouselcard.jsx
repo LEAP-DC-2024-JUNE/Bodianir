@@ -1,5 +1,8 @@
+import { Mycontext } from "@/Utilities/context";
 import moment from "moment";
+import { useContext } from "react";
 export const Carouselcard = ({ article }) => {
+  // const { count, setCount } = useContext(Mycontext);
   if (!article) {
     return null;
   }
@@ -14,6 +17,13 @@ export const Carouselcard = ({ article }) => {
         <p className="mt-6 ml-14">
           {moment(article.readable_publish_date).format("MMM Do YYYY")}
         </p>
+        {/* <div>{count}</div>
+        <button className="text-white" onClick={() => setCount(count + 1)}>
+          Nemeh
+        </button>
+        <button className="text-white" onClick={() => setCount(count - 1)}>
+          Hasah
+        </button> */}
       </div>
       {/* <p>{article.title}</p> */}
     </div>
