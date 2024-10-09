@@ -11,6 +11,7 @@ export const Blogcard = ({
   id,
   name,
 }) => {
+  const Slicedtitle = title.length > 15 ? title.slice(0, 11) + "..." : title;
   return (
     <Link href={{ pathname: "/blog/singlepost", query: { Idselect: id } }}>
       <div className="w-[350px] h-[370px]">
@@ -27,7 +28,8 @@ export const Blogcard = ({
           {tags[0]}
         </button>
 
-        <h1 className="font-black">{title}</h1>
+        <h1 className="font-black">{Slicedtitle}</h1>
+
         <p>{username}</p>
         <p>{description}</p>
         <div className="flex gap-10 mt-5">
