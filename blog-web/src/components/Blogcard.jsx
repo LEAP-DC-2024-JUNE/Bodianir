@@ -24,7 +24,7 @@ export const Blogcard = ({
           />
         }
 
-        <button className="rounded-md bg-slate-200 text-sky-600 my-7 text-center gap-20 w-[100px]">
+        <button className="rounded-md bg-slate-200 text-sky-600 my-7 text-center gap-20 inline-block">
           {tags[0]}
         </button>
 

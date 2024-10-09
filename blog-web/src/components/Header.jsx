@@ -19,7 +19,7 @@ export const Header = ({ setinputvalue }) => {
         </Link>
         <Link href="/blog">Blog</Link>
 
-        <Link href="#footer" className="px-4">
+        <Link href="/contact" className="px-4">
           Contact
         </Link>
       </div>

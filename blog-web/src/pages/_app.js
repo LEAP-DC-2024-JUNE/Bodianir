@@ -18,6 +18,7 @@ export default function App({ Component, pageProps }) {
     fetchArticles();
   };
   useEffect(FetchDataUse, [load, filter]);
+
   const [articles, setArticle] = useState([]);
   const [index, setIndex] = useState(0);
   const fetchData = () => {
